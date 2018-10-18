@@ -1,0 +1,43 @@
+{% load static bootstrap4 %}
+
+<html>
+    <head>
+        {% block header %}
+        {% endblock %}
+
+        {% block styles %}
+        {% bootstrap_css %}
+        {% endblock %}
+
+        {% block head_scripts %}
+
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <div class="container">
+            <h1> ESP8266</h1>
+            <h4> This Example shows how you can use Micropython to control harware components</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <button id="pin2" class="btn btn-default">pin 2</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="pin4" class="btn btn-default">pin 4</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="pin12" class="btn btn-default">pin 12</button>
+                </div>
+            </div>
+
+        </div>
+        {% endblock %}
+
+        {% block script %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        {% bootstrap_javascript %}
+        <script src="{% static 'script.js' %}"></script>
+        {% endblock %}
+
+    </body>
+</html>
